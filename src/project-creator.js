@@ -1,6 +1,6 @@
 export{createProject}
 
-function createProject(){
+function createProject(h1Text,pText){
     //Declaring HTML Variables
     const divCreate = document.createElement("div");
     const h1Create = document.createElement("h1");
@@ -31,14 +31,17 @@ function createProject(){
         div.appendChild(cloneH1Create);
     }
 
-    function appendProject(parentDiv,childDiv,h1,p,className){
-        parentDiv.appendChild(childDiv);
-        childDiv.className.add(className);
-        childDiv.appendChild(h1);
-        childDiv.appendChild(p);
-    }
+    // function appendProject(parentDiv,childDiv,h1,p,className){
+    //     let cloneChildDiv = childDiv.cloneNode(true);
+    //     cloneChildDiv.classList.add(className);
+    //     parentDiv.appendChild(cloneChildDiv);
+    //     cloneChildDiv.appendChild(h1);
+    //     cloneChildDiv.appendChild(p);
+    // }
 
-    const testDiv = createDivSection(contentProjectDiv,divCreate,"testDiv");
-    const testH1 = createH1(testDiv.cloneDivCreate,h1Create,"Test H1","testH1");
-    const testP = createP(testDiv.cloneDivCreate,pCreate,"this is a test description","testP")
+    let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
+    let projectH1 = createH1(projectDiv.cloneDivCreate,h1Create,h1Text,"projectH1");
+    let projectP = createP(projectDiv.cloneDivCreate,pCreate,pText,"projectP");
+
+    // appendProject(contentProjectDiv,testDiv.cloneDivCreate,testH1,testP,"projectDiv");
 }

@@ -31,17 +31,25 @@ function createProject(h1Text,pText){
         div.appendChild(cloneH1Create);
     }
 
-    // function appendProject(parentDiv,childDiv,h1,p,className){
-    //     let cloneChildDiv = childDiv.cloneNode(true);
-    //     cloneChildDiv.classList.add(className);
-    //     parentDiv.appendChild(cloneChildDiv);
-    //     cloneChildDiv.appendChild(h1);
-    //     cloneChildDiv.appendChild(p);
-    // }
+    function createProjectObject(h1Text,pText){
+        const h1TextObj = h1Text;
+        const pTextObj = pText;
+        return{h1TextObj,pTextObj}
+    }
 
-    let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
-    let projectH1 = createH1(projectDiv.cloneDivCreate,h1Create,h1Text,"projectH1");
-    let projectP = createP(projectDiv.cloneDivCreate,pCreate,pText,"projectP");
+    const tempProject = createProjectObject(h1Text,pText);
 
-    // appendProject(contentProjectDiv,testDiv.cloneDivCreate,testH1,testP,"projectDiv");
+
+    function appendProject(tempProject){
+        let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
+        createH1(projectDiv.cloneDivCreate,h1Create,tempProject.h1TextObj,"projectH1");
+        createP(projectDiv.cloneDivCreate,pCreate,tempProject.pTextObj,"projectP");
+    }
+
+    appendProject(tempProject)
+
+
+
+
+
 }

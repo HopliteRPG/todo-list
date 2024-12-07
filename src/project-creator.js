@@ -1,4 +1,6 @@
 export{createProject}
+let projectIdCount = 0;
+let projectArray = [];
 
 function createProject(h1Text,pText){
     //Declaring HTML Variables
@@ -6,7 +8,6 @@ function createProject(h1Text,pText){
     const h1Create = document.createElement("h1");
     const pCreate = document.createElement("p");
     const contentProjectDiv = document.querySelector(".contentProjectDiv");
-    let projectArray = []
 
 
     //Functions
@@ -34,16 +35,27 @@ function createProject(h1Text,pText){
     function createProjectObject(h1Text,pText){
         const h1TextObj = h1Text;
         const pTextObj = pText;
-        return{h1TextObj,pTextObj}
+        const id = undefined;
+        return{h1TextObj,pTextObj,id}
+    }
+
+    function createID(projectObject){
+        if(projectObject.id == undefined){
+            projectObject.id = projectIdCount;
+            projectIdCount++;
+            projectArray.push(projectObject);
+            console.log(projectArray)
+        }
     }
 
     const tempProject = createProjectObject(h1Text,pText);
 
 
-    function appendProject(tempProject){
+    function appendProject(projectObject){
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,tempProject.h1TextObj,"projectH1");
         createP(projectDiv.cloneDivCreate,pCreate,tempProject.pTextObj,"projectP");
+        createID(tempProject)
     }
 
     appendProject(tempProject)

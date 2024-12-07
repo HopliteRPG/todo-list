@@ -39,9 +39,10 @@ function createProject(h1Text,pText){
         return{h1TextObj,pTextObj,id}
     }
 
-    function createID(projectObject){
+    function createID(projectObject,projectDiv){
         if(projectObject.id == undefined){
             projectObject.id = projectIdCount;
+            projectDiv.setAttribute("id", projectIdCount)
             projectIdCount++;
             projectArray.push(projectObject);
             console.log(projectArray)
@@ -55,7 +56,7 @@ function createProject(h1Text,pText){
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,tempProject.h1TextObj,"projectH1");
         createP(projectDiv.cloneDivCreate,pCreate,tempProject.pTextObj,"projectP");
-        createID(tempProject)
+        createID(tempProject,projectDiv.cloneDivCreate)
     }
 
     appendProject(tempProject)

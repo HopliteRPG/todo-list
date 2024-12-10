@@ -2,6 +2,9 @@ export{createProject}
 let projectIdCount = 0;
 let projectArray = [];
 
+
+
+
 function createProject(h1Text,pText){
     //Declaring HTML Variables
     const divCreate = document.createElement("div");
@@ -56,7 +59,7 @@ function createProject(h1Text,pText){
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,tempProject.h1TextObj,"projectH1");
         createP(projectDiv.cloneDivCreate,pCreate,tempProject.pTextObj,"projectP");
-        createID(tempProject,projectDiv.cloneDivCreate)
+        createID(projectObject,projectDiv.cloneDivCreate)
     }
 
     appendProject(tempProject)

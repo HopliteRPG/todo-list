@@ -1,5 +1,5 @@
 export {todoCreator}
-let todoArray = [];
+let displayArray = [];
 
 function todoCreator(){
     function createTodoObject(id){
@@ -12,13 +12,13 @@ function todoCreator(){
         todoObject.todoContentArray.push(desc);
     }   
 
-    function addTodoToArray(todoArray,todoObject){
-        todoArray.push(todoObject)
+    function addTodoToDisplayArray(displayArray,todoObject){
+        displayArray.push(todoObject);
     }
     
     
-    function printTodoArray(todoArray){
-        console.log(todoArray);
+    function printDisplayArray(displayArray){
+        console.log(displayArray);
     }
     
     let testTodoObject = createTodoObject(0);
@@ -26,8 +26,8 @@ function todoCreator(){
     function testAddBlah(todoObject){
         createTodo(todoObject,"Todo1");
         createTodo(todoObject,"Todo2");
-        addTodoToArray(todoArray,todoObject)
-        printTodoArray(todoArray);
+        addTodoToDisplayArray(displayArray,todoObject);
+        printDisplayArray(displayArray);
     }
 
     testAddBlah(testTodoObject)

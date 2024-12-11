@@ -1,6 +1,7 @@
 import "./styles.css";
 import { createProject } from "./project-creator";
 import {touchHTML} from "./event-listener-code";
+import {todoCreator} from "./todo-creator";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
@@ -9,3 +10,5 @@ createProject("Bruh H1","lorem ipsum");
 createProject("HUH H1","HSJLDAFH;LSDJK");
 
 touchHTML(contentProjectDiv,".projectDiv");
+
+todoCreator()

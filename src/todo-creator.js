@@ -1,12 +1,36 @@
-// let todoArray = [];
+export {todoCreator}
+let todoArray = [];
 
-// function createTodoObject(id){
-//     let todoObjectId = id;
-//     let todoContentArray = []
-// }
 
-// function addTodo(todoObject,desc){
-//     todoObject.todoContentArray += desc;
-// }   
+function todoCreator(){
+    function createTodoObject(id){
+        let todoObjectId = id;
+        let todoContentArray = [];
+        return{todoContentArray}
+    }
+    
+    function createTodo(todoObject,desc){
+        todoObject.todoContentArray.push(desc);
+    }   
 
-// function displayTodo();
+    function addTodoToArray(todoArray,todoObject){
+        todoArray.push(todoObject)
+    }
+    
+    
+    function printTodoArray(todoArray){
+        console.log(todoArray);
+    }
+    
+    let testTodoObject = createTodoObject(0);
+    
+    function testAddBlah(todoObject){
+        createTodo(todoObject,"Todo1");
+        addTodoToArray(todoArray,todoObject)
+        printTodoArray(todoArray);
+    }
+
+    testAddBlah(testTodoObject)
+    
+}
+

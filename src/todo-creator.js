@@ -1,7 +1,6 @@
 export {todoCreator}
 let todoArray = [];
 
-
 function todoCreator(){
     function createTodoObject(id){
         let todoObjectId = id;
@@ -26,6 +25,7 @@ function todoCreator(){
     
     function testAddBlah(todoObject){
         createTodo(todoObject,"Todo1");
+        createTodo(todoObject,"Todo2");
         addTodoToArray(todoArray,todoObject)
         printTodoArray(todoArray);
     }

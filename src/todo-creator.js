@@ -6,7 +6,7 @@ function todoCreator(){
     function createTodoObject(id){
         let todoObjectId = id;
         let todoContentArray = [];
-        return{todoContentArray}
+        return{id,todoContentArray}
     }
     
     function createTodo(todoObject,desc){

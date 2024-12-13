@@ -2,6 +2,27 @@ export {todoCreator}
 let displayArray = [];
 
 function todoCreator(){
+    //Declaring HTML Variables
+    const divCreate = document.createElement("div");
+    const h1Create = document.createElement("h1");
+    const pCreate = document.createElement("p");
+    const contentTodoDiv = document.querySelector(".contentTodoDiv");
+
+    //Functions
+    function createDivSection(parentDiv,div,className){
+        let cloneDivCreate = div.cloneNode(true);
+        cloneDivCreate.classList.add(className)
+        parentDiv.appendChild(cloneDivCreate);
+        return{cloneDivCreate}
+    }
+
+    function createP(div,p,text,className){
+        let clonePCreate = p.cloneNode(true);
+        clonePCreate.innerText = text;
+        clonePCreate.classList.add(className);
+        div.appendChild(clonePCreate);
+    }
+
     function createTodoObject(id){
         let todoObjectId = id;
         let todoContentArray = [];
@@ -21,16 +42,24 @@ function todoCreator(){
         console.log(displayArray);
     }
     
-    let testTodoObject = createTodoObject(0);
+    const testTodoObject = createTodoObject(0);
     
-    function testAddBlah(todoObject){
+    function appendTodo(todoObject){
+        todoObject.todoContentArray.forEach(element => {
+            let todoDiv = createDivSection(contentTodoDiv,divCreate,"todoDiv");
+            createP(todoDiv.cloneDivCreate,pCreate,element,"projectP");
+        });
+    }
+
+    function updateTodoPage(todoObject){
         createTodo(todoObject,"Todo1");
         createTodo(todoObject,"Todo2");
         addTodoToDisplayArray(displayArray,todoObject);
+        appendTodo(testTodoObject)
         printDisplayArray(displayArray);
     }
 
-    testAddBlah(testTodoObject)
+    updateTodoPage(testTodoObject)
     
 }
 

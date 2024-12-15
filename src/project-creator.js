@@ -47,22 +47,38 @@ function createProject(h1Text,pText){
             projectObject.id = projectIdCount;
             projectDiv.setAttribute("id", projectIdCount)
             projectIdCount++;
-            projectArray.push(projectObject);
-            console.log(projectArray)
+
         }
     }
 
-    const tempProject = createProjectObject(h1Text,pText);
-
-
-    function appendProject(projectObject){
-        let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
-        createH1(projectDiv.cloneDivCreate,h1Create,tempProject.h1TextObj,"projectH1");
-        createP(projectDiv.cloneDivCreate,pCreate,tempProject.pTextObj,"projectP");
-        createID(projectObject,projectDiv.cloneDivCreate);
+    function addObjectToArray(projectObject){
+        projectArray.push(projectObject);
+        console.log(projectArray)
     }
 
-    appendProject(tempProject)
+    function clearProjectDisplay(){
+        contentProjectDiv.innerText = "";
+    }
+
+    const tempProject = createProjectObject(h1Text,pText);
+    addObjectToArray(tempProject);
+
+
+    function appendProject(array){
+        clearProjectDisplay()
+        array.forEach(element => {
+            let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
+            createH1(projectDiv.cloneDivCreate,h1Create,element.h1TextObj,"projectH1");
+            createP(projectDiv.cloneDivCreate,pCreate,element.pTextObj,"projectP");
+            createID(element,projectDiv.cloneDivCreate);
+        });
+       
+    }
+
+
+    
+
+    appendProject(projectArray)
 
 
 

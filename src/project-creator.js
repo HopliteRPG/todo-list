@@ -1,4 +1,4 @@
-export{createProject,projectArray,projectIdCount}
+export{createProject,projectArray}
 let projectIdCount = 0;
 let projectArray = [];
 

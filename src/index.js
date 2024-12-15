@@ -1,14 +1,16 @@
 import "./styles.css";
 import { createProject } from "./project-creator";
 import {touchHTML} from "./event-listener-code";
-import {todoCreator} from "./todo-creator";
+import { projectArray } from "./project-creator";
+import { appendProject } from "./project-creator-html";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
 createProject("Test H1","This is a test to see if P works");
 createProject("Bruh H1","lorem ipsum");
 createProject("HUH H1","HSJLDAFH;LSDJK");
+createProject("lol H1","lol lol lol");
 
 touchHTML(contentProjectDiv,".projectDiv");
 
-todoCreator()
+appendProject(projectArray)

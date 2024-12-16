@@ -1,4 +1,5 @@
   export {appendProject}
+  import { appendButtonToProject } from "./project-form-html";
   function appendProject(array){
     //Declaring HTML Variables
   const divCreate = document.createElement("div");
@@ -39,7 +40,8 @@
 }
 
 function appendProjectToDom(array){
-    clearProjectDisplay()
+    clearProjectDisplay();
+    appendButtonToProject();
     array.forEach(element => {
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,element.h1TextObj,"projectH1");

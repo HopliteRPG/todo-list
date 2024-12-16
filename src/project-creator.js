@@ -25,10 +25,4 @@ function createProject(h1Text,pText){
 
     const tempProject = createProjectObject(h1Text,pText);
     addObjectToArray(tempProject);
-
-
-
-
-
-
 }

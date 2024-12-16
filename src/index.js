@@ -3,6 +3,7 @@ import { createProject } from "./project-creator";
 import {touchHTML} from "./event-listener-code";
 import { projectArray } from "./project-creator";
 import { appendProject } from "./project-creator-html";
+import { projectFormLogic } from "./project-form";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
@@ -16,3 +17,4 @@ createProject("lol H1","lol lol lol");
 appendProject(projectArray)
 
 touchHTML(contentProjectDiv,".projectDiv");
+projectFormLogic();

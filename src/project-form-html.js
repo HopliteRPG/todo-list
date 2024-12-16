@@ -8,7 +8,8 @@ function appendButtonToProject(){
     function appendButtonToProjectTest(contentProjectDiv,div,button){
         contentProjectDiv.appendChild(div);
         div.appendChild(button);
-        button.innerText = "Add Project"
+        button.innerText = "Add Project";
+        button.setAttribute("class","addProjectButton")
     }
     appendButtonToProjectTest(contentProjectDiv,divCreate,buttonCreate);
 

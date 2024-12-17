@@ -1,9 +1,11 @@
 import { createProject } from "./project-creator";
 import { appendProject } from "./project-creator-html";
 import { projectArray } from "./project-creator";
+import { touchHTML } from "./event-listener-code";
 export {projectFormLogic}
 
 function projectFormLogic(){
+const contentProjectDiv = document.querySelector(".contentProjectDiv");
 //Dialong and Modal Code 
 const dialog = document.querySelector("dialog");
 const showBtn = document.querySelector(".addProjectButton");
@@ -24,7 +26,7 @@ form.addEventListener("submit",(event) => {
   form.reset();
   dialog.close();
   appendProject(projectArray);
-
+  touchHTML(contentProjectDiv,".projectDiv");
 });
 
 

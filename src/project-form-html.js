@@ -1,4 +1,6 @@
+
 export{appendButtonToProject}
+
 
 const divCreate = document.createElement("div");
 const buttonCreate = document.createElement("button");
@@ -10,7 +12,10 @@ function appendButtonToProject(){
         div.appendChild(button);
         button.innerText = "Add Project";
         button.setAttribute("class","addProjectButton")
+
     }
     appendButtonToProjectTest(contentProjectDiv,divCreate,buttonCreate);
-
 }
+
+
+

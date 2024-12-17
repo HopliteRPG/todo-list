@@ -1,4 +1,6 @@
 import { createProject } from "./project-creator";
+import { appendProject } from "./project-creator-html";
+import { projectArray } from "./project-creator";
 export {projectFormLogic}
 
 function projectFormLogic(){
@@ -21,6 +23,8 @@ form.addEventListener("submit",(event) => {
   createProject(formData.get("project_h1"),formData.get("project_p"));
   form.reset();
   dialog.close();
+  appendProject(projectArray);
+
 });
 
 

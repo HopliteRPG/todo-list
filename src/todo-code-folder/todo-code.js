@@ -3,7 +3,6 @@ let displayArray = [];
 
 function todoCreator(){
 
-
     function createTodoObject(id){
         let todoObjectId = id;
         let todoContentArray = [];

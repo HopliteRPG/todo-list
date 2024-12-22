@@ -12,8 +12,8 @@ function createProject(h1Text,pText){
 
     function createID(projectObject){
         if(projectObject.id == undefined){
-            projectIdCount++;
             projectObject.id = projectIdCount;
+            projectIdCount++;
         }
     }
 

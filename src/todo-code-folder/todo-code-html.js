@@ -1,4 +1,6 @@
-    //Declaring HTML Variables
+    import { displayArray } from "./todo-code";
+    export {updateTodoPage}
+   //Declaring HTML Variables
     const divCreate = document.createElement("div");
     const h1Create = document.createElement("h1");
     const pCreate = document.createElement("p");
@@ -28,19 +30,15 @@
         return{cloneTodoCheckbox};
     }
 
-    function appendTodo(todoObject){
-        todoObject.todoContentArray.forEach(element => {
+    function appendTodo(todoText){
+            console.log(todoText)
             let todoDiv = createDivSection(contentTodoDiv,divCreate,"todoDiv");
-            let todoDiv2 = createDivSection(todoDiv.cloneDivCreate,divCreate,"todoDiv2");
-            createTodoCheckbox(todoDiv2.cloneDivCreate,todoCheckbox,"todoCheckbox")
-            createP(todoDiv2.cloneDivCreate,pCreate,element,"todoP");
-        });
+            createTodoCheckbox(todoDiv.cloneDivCreate,todoCheckbox,"todoCheckbox")
+            createP(todoDiv.cloneDivCreate,pCreate,todoText,"todoP");
     }
 
-    function updateTodoPage(todoObject){
-        createTodo(todoObject,"Todo1");
-        createTodo(todoObject,"Todo2");
-        addTodoToDisplayArray(displayArray,todoObject);
-        appendTodo(testTodoObject)
-        printDisplayArray(displayArray);
+    function updateTodoPage(displayArray,projectId){
+        displayArray[projectId].todoContentArray.forEach(element => {
+        appendTodo(element)
+        });
     }

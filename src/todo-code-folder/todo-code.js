@@ -1,30 +1,42 @@
-export {todoCreator}
+export {displayTodoCreator,createTodo,displayArray}
 let displayArray = [];
 
-function todoCreator(){
 
-    function createTodoObject(id){
-        let todoObjectId = id;
-        let todoContentArray = [];
-        return{id,todoContentArray};
-    }
-    
-    function createTodo(todoObject,desc){
-        todoObject.todoContentArray.push(desc);
-    }   
+function displayTodoCreator(){
 
-    function addTodoToDisplayArray(displayArray,todoObject){
-        displayArray.push(todoObject);
-    }
-    
-    
-    function printDisplayArray(displayArray){
-        console.log(displayArray);
-    }
-    
-    
+
+   function createTodoObject(){
+       let id = undefined;
+       let todoContentArray = [];
+       return{id,todoContentArray};
+   }
   
 
-    
+
+
+
+   function createID(todoObject){
+       if(todoObject.id == undefined){
+           todoObject.id = projectIdCount;
+           todoObject++;
+       }
+   }
+
+
+   function addTodoToDisplayArray(displayArray,todoObject){
+       displayArray.push(todoObject);
+   }
+  
+  
+   function printDisplayArray(displayArray){
+       console.log(displayArray);
+   }
+  
+   const tempDisplayTodo = createTodoObject();
+   createID(tempDisplayTodo);
+   addTodoToDisplayArray(displayArray,tempDisplayTodo)
 }
+function createTodo(todoObject,desc){
+   todoObject.todoContentArray.push(desc);
+}  
 

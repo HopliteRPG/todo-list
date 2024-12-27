@@ -1,5 +1,5 @@
   export {appendProject}
-  import { appendButtonToProject } from "./project-form-html";
+  import { appendButtonToProject } from "../project-form-html";
   
   function appendProject(array){
     //Declaring HTML Variables

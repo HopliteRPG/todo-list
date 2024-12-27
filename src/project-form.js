@@ -1,6 +1,6 @@
-import { createProject } from "./project-creator";
-import { appendProject } from "./project-creator-html";
-import { projectArray } from "./project-creator";
+import { createProject } from "./project-creator-folder/project-creator";
+import { appendProject } from "./project-creator-folder/project-creator-html";
+import { projectArray } from "./project-creator-folder/project-creator";
 import { touchHTML } from "./event-listener-code";
 export {projectFormLogic}
 

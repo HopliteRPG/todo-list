@@ -1,17 +1,17 @@
-import { createProject } from "./project-creator-folder/project-creator";
-import { appendProject } from "./project-creator-folder/project-creator-html";
-import { projectArray } from "./project-creator-folder/project-creator";
-import { touchHTML } from "./event-listener-code";
+import { createProject } from "../project-creator-folder/project-creator";
+import { appendProject } from "../project-creator-folder/project-creator-html";
+import { projectArray } from "../project-creator-folder/project-creator";
+import { touchHTML } from "../event-listener-code";
 export {projectFormLogic}
 
 function projectFormLogic(){
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 //Dialong and Modal Code 
-const dialog = document.querySelector("dialog");
+const dialog = document.querySelector(".projectDialog");
 const showBtn = document.querySelector(".addProjectButton");
 const closeBtn = document.querySelector(".close-btn");
 const submitBtn = document.querySelector(".submit-btn");
-const form = document.querySelector("form");
+const form = document.querySelector(".projectForm");
 
 showBtn.addEventListener("click", () => {
   dialog.showModal();

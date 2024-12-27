@@ -1,4 +1,5 @@
     import { displayArray } from "./todo-code";
+    import { appendButtonToTodo } from "../project-form-html";
     export {updateTodoPage}
    //Declaring HTML Variables
     const divCreate = document.createElement("div");
@@ -38,6 +39,8 @@
     }
 
     function updateTodoPage(displayArray,projectId){
+        appendButtonToTodo();
+       
         displayArray[projectId].todoContentArray.forEach(element => {
         appendTodo(element)
         });

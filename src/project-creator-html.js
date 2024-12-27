@@ -43,6 +43,7 @@
 function appendProjectToDom(array){
     clearProjectDisplay();
     appendButtonToProject();
+ 
     array.forEach(element => {
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,element.h1TextObj,"projectH1");

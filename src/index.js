@@ -4,8 +4,8 @@ import {touchHTML} from "./event-listener-code";
 import { projectArray } from "./project-creator-folder/project-creator";
 import { appendProject } from "./project-creator-folder/project-creator-html";
 import { projectFormLogic } from "./project-form-folder/project-form";
-import { updateTodoPage } from "./todo-code-folder/todo-code-html";
-import {displayTodoCreator,createTodo,displayArray} from "./todo-code-folder/todo-code"
+import { updateTodoPage } from "./todo-creator-folder/todo-creator-html";
+import {displayTodoCreator,createTodo,displayArray} from "./todo-creator-folder/todo-creator"
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 

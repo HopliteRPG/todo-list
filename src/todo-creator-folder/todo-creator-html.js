@@ -1,4 +1,4 @@
-    import { displayArray } from "./todo-code";
+    import { displayArray } from "./todo-creator";
     import { appendButtonToTodo } from "../todo-form-folder/todo-form-html";
     export {updateTodoPage}
    //Declaring HTML Variables

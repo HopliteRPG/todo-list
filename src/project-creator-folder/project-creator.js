@@ -1,4 +1,5 @@
 export{createProject,projectArray}
+
 let projectIdCount = 0;
 let projectArray = [];
 
@@ -24,5 +25,6 @@ function createProject(h1Text,pText){
     }
 
     const tempProject = createProjectObject(h1Text,pText);
+    console.log("project created")
     addObjectToArray(tempProject);
 }

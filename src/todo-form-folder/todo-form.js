@@ -1,17 +1,22 @@
-import { createProject } from "../project-creator-folder/project-creator";
-import { appendProject } from "../project-creator-folder/project-creator-html";
-import { projectArray } from "../project-creator-folder/project-creator";
+import { createTodo } from "../todo-creator-folder/todo-creator";
+import { displayTodoCreator } from "../todo-creator-folder/todo-creator";
 import { touchHTML } from "../event-listener-code";
+import { projectArray } from "../project-creator-folder/project-creator";
+import { currentProjectId } from "../event-listener-code";
+import { updateTodoPage } from "../todo-creator-folder/todo-creator-html";
+import { displayArray } from "../todo-creator-folder/todo-creator";
+
 export {todoFormLogic}
 
 function todoFormLogic(){
+const contentProjectDiv = document.querySelector(".contentProjectDiv");
 const contentTodoDiv = document.querySelector(".contentTodoDiv");
 //Dialong and Modal Code 
 const dialog = document.querySelector(".todoDialog");
 const showBtn = document.querySelector(".addTodoButton");
-const closeBtn = document.querySelector(".close-btn");
+const closeBtn = document.querySelector(".todo-close-btn");
 const submitBtn = document.querySelector(".submit-btn");
-const form = document.querySelector(".todoDialog");
+const form = document.querySelector(".todoForm");
 
 showBtn.addEventListener("click", () => {
   dialog.showModal();
@@ -22,11 +27,15 @@ showBtn.addEventListener("click", () => {
 form.addEventListener("submit",(event) => {
   event.preventDefault();
   const formData = new FormData(form);
-  createProject(formData.get("project_h1"),formData.get("project_p"));
+  displayTodoCreator();
+  createTodo(displayArray[currentProjectId],formData.get("todo_h1"))
+  
+  updateTodoPage(displayArray,currentProjectId)
+
   form.reset();
   dialog.close();
-  appendProject(projectArray);
   touchHTML(contentProjectDiv,".projectDiv");
+//   todoFormLogic();
 });
 
 

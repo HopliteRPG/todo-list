@@ -38,7 +38,12 @@
             createP(todoDiv.cloneDivCreate,pCreate,todoText,"todoP");
     }
 
+    function clearProjectDisplay(){
+        contentTodoDiv.innerText = "";
+    }
+
     function updateTodoPage(displayArray,projectId){
+        clearProjectDisplay()
         appendButtonToTodo();
        
         displayArray[projectId].todoContentArray.forEach(element => {

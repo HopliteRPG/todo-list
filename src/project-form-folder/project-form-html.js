@@ -4,7 +4,7 @@ export{appendButtonToProject}
 
 
 
-const contentProjectDiv = document.querySelector(".contentProjectDiv");
+const buttonContentProjectDiv = document.querySelector(".buttonContentProjectDiv");
 
 
 
@@ -21,7 +21,7 @@ function appendButtonToProject(){
         button.setAttribute("class","addProjectButton")
 
     }
-    appendButtonToProjectTest(contentProjectDiv,cloneDivCreate,cloneButtonCreate);
+    appendButtonToProjectTest(buttonContentProjectDiv,cloneDivCreate,cloneButtonCreate);
 }
 
 

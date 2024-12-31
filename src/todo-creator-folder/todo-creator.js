@@ -31,6 +31,7 @@ function displayTodoCreator(){
 }
 
 function createTodo(todoObject,desc){
+    console.log(todoObject)
    todoObject.todoContentArray.push(desc);
 }  
 

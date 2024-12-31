@@ -42,13 +42,13 @@
 
 function appendProjectToDom(array){
     clearProjectDisplay();
-    appendButtonToProject();
  
     array.forEach(element => {
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,element.h1TextObj,"projectH1");
         createP(projectDiv.cloneDivCreate,pCreate,element.pTextObj,"projectP");
         setProjectHTMLID(projectDiv.cloneDivCreate,element.id);
+        console.log("appended")
     });
    
     }

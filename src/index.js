@@ -8,11 +8,12 @@ import { updateTodoPage } from "./todo-creator-folder/todo-creator-html";
 import {displayTodoCreator,createTodo,displayArray} from "./todo-creator-folder/todo-creator";
 import { todoFormLogic } from "./todo-form-folder/todo-form";
 import { appendButtonToProject } from "./project-form-folder/project-form-html";
+import { appendButtonToTodo } from "./todo-form-folder/todo-form-html";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
 
-//Creating button
+//Creating Project button
     appendButtonToProject();
 
 //Creating Project Test
@@ -22,6 +23,9 @@ createProject("Test H1","This is a test to see if P works");
 // createProject("lol H1","lol lol lol");
 
 appendProject(projectArray);
+
+//Creating todo button
+appendButtonToTodo()
 
 //Creating Todo Test
 

@@ -1,6 +1,6 @@
 export{appendButtonToTodo}
 
-const contentTodoDiv = document.querySelector(".contentTodoDiv");
+const buttonContentTodoDiv = document.querySelector(".buttonContentTodoDiv");
 
 function appendButtonToTodo(){
     const divCreate = document.createElement("div");
@@ -15,5 +15,5 @@ function appendButtonToTodo(){
         button.setAttribute("class","addTodoButton")
 
     }
-    appendButtonToTodoTest(contentTodoDiv,cloneDivCreate,cloneButtonCreate);
+    appendButtonToTodoTest(buttonContentTodoDiv,cloneDivCreate,cloneButtonCreate);
 }

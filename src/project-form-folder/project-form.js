@@ -2,6 +2,7 @@ import { createProject } from "../project-creator-folder/project-creator";
 import { appendProject } from "../project-creator-folder/project-creator-html";
 import { projectArray } from "../project-creator-folder/project-creator";
 import { touchHTML } from "../event-listener-code/get-project-id";
+import { displayTodoCreator } from "../todo-creator-folder/todo-creator";
 export {projectFormLogic}
 
 function projectFormLogic(){
@@ -23,6 +24,7 @@ form.addEventListener("submit",(event) => {
   event.preventDefault();
   const formData = new FormData(form);
   createProject(formData.get("project_h1"),formData.get("project_p"));
+  displayTodoCreator();
   form.reset();
   dialog.close();
   appendProject(projectArray);

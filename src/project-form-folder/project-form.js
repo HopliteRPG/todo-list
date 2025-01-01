@@ -3,6 +3,7 @@ import { appendProject } from "../project-creator-folder/project-creator-html";
 import { projectArray } from "../project-creator-folder/project-creator";
 import { touchHTML } from "../event-listener-code/get-project-id";
 import { displayTodoCreator } from "../todo-creator-folder/todo-creator";
+import { exportOnClickShowTodos } from "../event-listener-code/show-current-todo-list";
 export {projectFormLogic}
 
 function projectFormLogic(){
@@ -29,6 +30,7 @@ form.addEventListener("submit",(event) => {
   dialog.close();
   appendProject(projectArray);
   touchHTML(contentProjectDiv,".projectDiv");
+  exportOnClickShowTodos();
 });
 
 

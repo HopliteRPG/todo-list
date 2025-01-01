@@ -9,6 +9,7 @@ import {displayTodoCreator,createTodo,displayArray} from "./todo-creator-folder/
 import { todoFormLogic } from "./todo-form-folder/todo-form";
 import { appendButtonToProject } from "./project-form-folder/project-form-html";
 import { appendButtonToTodo } from "./todo-form-folder/todo-form-html";
+import { exportOnClickShowTodos } from "./event-listener-code/show-current-todo-list";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
@@ -18,7 +19,7 @@ const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
 //Creating Project Test
 createProject("Test H1","This is a test to see if P works");
-// createProject("Bruh H1","lorem ipsum");
+createProject("Bruh H1","lorem ipsum");
 // createProject("HUH H1","HSJLDAFH;LSDJK");
 // createProject("lol H1","lol lol lol");
 
@@ -31,7 +32,8 @@ appendButtonToTodo()
 
 displayTodoCreator();
 createTodo(displayArray[0],"test12");
-// createTodo(displayArray[0],"sjdflkasdfj");
+displayTodoCreator();
+createTodo(displayArray[1],"sjdflkasdfj");
 // console.log(displayArray)
 updateTodoPage(displayArray,0)
 
@@ -39,3 +41,5 @@ updateTodoPage(displayArray,0)
 touchHTML(contentProjectDiv,".projectDiv");
 projectFormLogic();
 todoFormLogic();
+
+exportOnClickShowTodos();

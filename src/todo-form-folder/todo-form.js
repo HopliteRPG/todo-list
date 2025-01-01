@@ -27,7 +27,6 @@ showBtn.addEventListener("click", () => {
 form.addEventListener("submit",(event) => {
   event.preventDefault();
   const formData = new FormData(form);
-  displayTodoCreator();
   createTodo(displayArray[currentProjectId],formData.get("todo_h1"))
   
   updateTodoPage(displayArray,currentProjectId)

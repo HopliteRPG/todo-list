@@ -1,7 +1,6 @@
 export{touchHTML,currentProjectId}
 let currentProjectId = 0;
 function touchHTML(dom,targetHTMLClassname){
-    
   let targetHTML = dom.querySelectorAll(targetHTMLClassname);
   targetHTML.forEach(element => {
     element.addEventListener("click", event =>{

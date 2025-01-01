@@ -1,7 +1,7 @@
 import { createProject } from "../project-creator-folder/project-creator";
 import { appendProject } from "../project-creator-folder/project-creator-html";
 import { projectArray } from "../project-creator-folder/project-creator";
-import { touchHTML } from "../event-listener-code";
+import { touchHTML } from "../event-listener-code/get-project-id";
 export {projectFormLogic}
 
 function projectFormLogic(){

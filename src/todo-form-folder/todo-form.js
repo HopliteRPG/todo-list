@@ -1,8 +1,8 @@
 import { createTodo } from "../todo-creator-folder/todo-creator";
 import { displayTodoCreator } from "../todo-creator-folder/todo-creator";
-import { touchHTML } from "../event-listener-code";
+import { touchHTML } from "../event-listener-code/get-project-id";
 import { projectArray } from "../project-creator-folder/project-creator";
-import { currentProjectId } from "../event-listener-code";
+import { currentProjectId } from "../event-listener-code/get-project-id";
 import { updateTodoPage } from "../todo-creator-folder/todo-creator-html";
 import { displayArray } from "../todo-creator-folder/todo-creator";
 

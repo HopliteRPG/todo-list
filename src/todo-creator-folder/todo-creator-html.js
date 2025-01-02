@@ -45,6 +45,6 @@
         clearProjectDisplay()
        
         displayArray[projectId].todoContentArray.forEach(element => {
-        appendTodo(element)
+        appendTodo(element.todoDescription)
         });
     }

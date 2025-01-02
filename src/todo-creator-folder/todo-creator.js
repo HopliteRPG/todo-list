@@ -2,6 +2,8 @@ export {displayTodoCreator,createTodo,displayArray}
 let displayArray = [];
 let todoObjectIdCounter = 0;
 
+
+
 function displayTodoCreator(){
 
     function createTodoObject(){
@@ -27,11 +29,19 @@ function displayTodoCreator(){
   
    const tempDisplayTodo = createTodoObject();
    createID(tempDisplayTodo);
-   addTodoToDisplayArray(displayArray,tempDisplayTodo)
+   addTodoToDisplayArray(displayArray,tempDisplayTodo);
+   printDisplayArray(displayArray)
+}
+
+function createTodoCheckAndDesc(description){
+    let checked = false;
+    let todoDescription = description;
+    return{checked,todoDescription}
 }
 
 function createTodo(todoObject,desc){
     console.log(todoObject)
-   todoObject.todoContentArray.push(desc);
+    let currentTodoAndDesc = createTodoCheckAndDesc(desc)
+   todoObject.todoContentArray.push(currentTodoAndDesc);
 }  
 

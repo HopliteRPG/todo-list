@@ -2,8 +2,10 @@ import { createProject } from "../project-creator-folder/project-creator";
 import { appendProject } from "../project-creator-folder/project-creator-html";
 import { projectArray } from "../project-creator-folder/project-creator";
 import { touchHTML } from "../event-listener-code/get-project-id";
-import { displayTodoCreator } from "../todo-creator-folder/todo-creator";
+import { displayArray, displayTodoCreator } from "../todo-creator-folder/todo-creator";
 import { exportOnClickShowTodos } from "../event-listener-code/show-current-todo-list";
+import { updateTodoPage } from "../todo-creator-folder/todo-creator-html";
+
 export {projectFormLogic}
 
 function projectFormLogic(){
@@ -31,6 +33,7 @@ form.addEventListener("submit",(event) => {
   appendProject(projectArray);
   touchHTML(contentProjectDiv,".projectDiv");
   exportOnClickShowTodos();
+  updateTodoPage(displayArray, displayArray[displayArray.length-1].id)
 });
 
 

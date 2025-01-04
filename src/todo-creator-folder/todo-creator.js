@@ -9,7 +9,8 @@ function displayTodoCreator(){
     function createTodoObject(){
        let id = undefined;
        let todoContentArray = [];
-       return{id,todoContentArray};
+       let subTodoIdCounter = 0;
+       return{id,todoContentArray,subTodoIdCounter};
    }
 
    function createID(todoObject){
@@ -36,12 +37,29 @@ function displayTodoCreator(){
 function createTodoCheckAndDesc(description){
     let checked = false;
     let todoDescription = description;
-    return{checked,todoDescription}
+    let subTodoId = undefined;
+    return{checked,todoDescription,subTodoId}
 }
 
 function createTodo(todoObject,desc){
     console.log(todoObject)
-    let currentTodoAndDesc = createTodoCheckAndDesc(desc)
+    let currentTodoAndDesc = createTodoCheckAndDesc(desc);
    todoObject.todoContentArray.push(currentTodoAndDesc);
+
+   createSubTodoId(todoObject)
+
 }  
+
+
+//Subtodo Stuff
+function createSubTodoId(todoObject){
+    todoObject.todoContentArray.forEach(element => {
+        // console.log("bruh")
+        // console.log(element)
+        if(element.subTodoId == undefined){
+            element.subTodoId = todoObject.subTodoIdCounter;
+            todoObject.subTodoIdCounter++;
+        }
+    });
+}
 

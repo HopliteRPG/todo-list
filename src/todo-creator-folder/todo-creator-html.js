@@ -9,10 +9,11 @@
     todoCheckbox.setAttribute("type", "checkbox");
 
     //Functions
-    function createDivSection(parentDiv,div,className){
+    function createDivSection(parentDiv,div,className,id){
         let cloneDivCreate = div.cloneNode(true);
         cloneDivCreate.classList.add(className)
         parentDiv.appendChild(cloneDivCreate);
+        cloneDivCreate.setAttribute("id",id)
         return{cloneDivCreate};
     }
 
@@ -30,12 +31,14 @@
         return{cloneTodoCheckbox};
     }
 
-    function appendTodo(todoText){
+    function appendTodo(todoText,id){
             console.log(todoText)
-            let todoDiv = createDivSection(contentTodoDiv,divCreate,"todoDiv");
+            let todoDiv = createDivSection(contentTodoDiv,divCreate,"todoDiv",id);
             createTodoCheckbox(todoDiv.cloneDivCreate,todoCheckbox,"todoCheckbox")
             createP(todoDiv.cloneDivCreate,pCreate,todoText,"todoP");
     }
+
+
 
     function clearProjectDisplay(){
         contentTodoDiv.innerText = "";
@@ -45,6 +48,6 @@
         clearProjectDisplay()
        
         displayArray[projectId].todoContentArray.forEach(element => {
-        appendTodo(element.todoDescription)
+        appendTodo(element.todoDescription,element.subTodoId)
         });
     }

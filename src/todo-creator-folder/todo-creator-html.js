@@ -1,4 +1,5 @@
     import { displayArray } from "./todo-creator";
+    import { exportCheckboxLogic,exportCheckboxPress} from "../event-listener-code/checkbox-code";
     export {updateTodoPage}
    //Declaring HTML Variables
     const divCreate = document.createElement("div");
@@ -50,4 +51,6 @@
         displayArray[projectId].todoContentArray.forEach(element => {
         appendTodo(element.todoDescription,element.subTodoId)
         });
+        exportCheckboxLogic();
+        exportCheckboxPress();
     }

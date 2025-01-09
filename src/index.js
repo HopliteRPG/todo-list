@@ -10,6 +10,7 @@ import { todoFormLogic } from "./todo-form-folder/todo-form";
 import { appendButtonToProject } from "./project-form-folder/project-form-html";
 import { appendButtonToTodo } from "./todo-form-folder/todo-form-html";
 import { exportOnClickShowTodos } from "./event-listener-code/show-current-todo-list";
+import { exportAutomaticallyCheckAllBoxes } from "./event-listener-code/checkbox-code";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
@@ -32,6 +33,8 @@ appendButtonToTodo()
 
 displayTodoCreator();
 createTodo(displayArray[0],"test12");
+createTodo(displayArray[0],"test13");
+createTodo(displayArray[0],"kys");
 displayTodoCreator();
 createTodo(displayArray[1],"sjdflkasdfj");
 // console.log(displayArray)
@@ -43,3 +46,5 @@ projectFormLogic();
 todoFormLogic();
 
 exportOnClickShowTodos();
+
+exportCheckboxPress();

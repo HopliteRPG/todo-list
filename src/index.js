@@ -10,7 +10,6 @@ import { todoFormLogic } from "./todo-form-folder/todo-form";
 import { appendButtonToProject } from "./project-form-folder/project-form-html";
 import { appendButtonToTodo } from "./todo-form-folder/todo-form-html";
 import { exportOnClickShowTodos } from "./event-listener-code/show-current-todo-list";
-import { exportAutomaticallyCheckAllBoxes } from "./event-listener-code/checkbox-code";
 
 const contentProjectDiv = document.querySelector(".contentProjectDiv");
 
@@ -46,5 +45,3 @@ projectFormLogic();
 todoFormLogic();
 
 exportOnClickShowTodos();
-
-exportCheckboxPress();

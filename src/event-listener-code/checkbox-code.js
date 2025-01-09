@@ -65,5 +65,10 @@ function exportCheckboxPress(){
 }
 
 function exportCheckboxLogic(){
-    checkboxLogic()
+    if(childContentTodoDiv.length !== 0){
+        checkboxLogic()
+    }
+    else{
+        return
+    }
 }
